@@ -662,7 +662,7 @@ function translateQuestions(questions, targetLang) {
   }
 
   return translatedQuestions;
-} // ← DIESE Klammer fehlte!
+} 
 
 // Multilingual general questions
 function getGeneralQuestion(emoji = null) {
