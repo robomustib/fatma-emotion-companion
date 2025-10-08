@@ -1,6 +1,5 @@
 /**
  * AI Conversation Manager for Fatma Emotion Companion
- * Robust conversation flow version
  */
 
 // ----------------- State Variables -----------------
