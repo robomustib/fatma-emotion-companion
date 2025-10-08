@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fatma - Deine Gefühlsbegleiterin</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="bodyguard">
+  <div class="avatar">👩🏽</div>
+  
+  <div class="chat-container" id="chatContainer">
+    <div class="message bot-message" id="welcomeMessage">
+      <b>Hallo! Ich bin Fatma, deine digitale Gefühlsbegleiterin. <br>Wie kann ich dir heute helfen?</b>
+    </div>
+  </div>
+  
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  
+  <div id="emojiSelection" class="hidden">
+    <h3>Welches Emoji beschreibt deinen aktuellen Zustand am besten?</h3>
+    <div class="emoji-palette">
+      <button class="emoji-option" onclick="selectEmoji('😊')">😊</button>
+      <button class="emoji-option" onclick="selectEmoji('😢')">😢</button>
+      <button class="emoji-option" onclick="selectEmoji('😠')">😠</button>
+      <button class="emoji-option" onclick="selectEmoji('😨')">😨</button>
+      <button class="emoji-option" onclick="selectEmoji('😲')">😲</button>
+      <button class="emoji-option" onclick="selectEmoji('😴')">😴</button>
+      <button class="emoji-option" onclick="selectEmoji('😐')">😐</button>
+      <button class="emoji-option" onclick="selectEmoji('🤔')">🤔</button>
+    </div>
+  </div>
+  
+  <div id="userInputSection">
+    <input type="text" id="userInput" placeholder="Schreibe deine Antwort hier...">
+    <button onclick="processUserInput()">Senden</button>
+  </div>
+  
+  <div id="horoscopeResult" class="horoscope hidden">
+    <h2>Dein persönliches Emotions-Horoskop</h2>
+    <div class="horoscope-emoji" id="finalEmoji"></div>
+    <p id="horoscopeText"></p>
+    <div class="verb-list" id="verbList"></div>
+    <button onclick="location.reload()" style="margin-top: 20px;">Neues Gespräch beginnen</button>
+  </div>
+  
+  <div class="language-switcher">
+    <a href="index.html">DE</a> | 
+    <a href="en.html">EN</a> | 
+    <a href="tr.html">TR</a>
+  </div>
+</div>
+
+<script src="assets/js/emotions.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/language-switcher.js"></script>
+</body>
+</html>
