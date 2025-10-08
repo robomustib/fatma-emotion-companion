@@ -1,5 +1,5 @@
 # Fatma - Your Emotion Companion
-<img src="https://github.com/robomustib/fatma-emotion-companion/blob/main/assets/img/fatma_logo.png?raw=true" alt="Fatma Logo" width="50%"/>
+<img src="https://github.com/robomustib/fatma-emotion-companion/blob/main/assets/img/fatmalogo.png?raw=true" alt="Fatma Logo" width="50%"/>
 A multilingual AI-powered web application that helps users explore and understand their emotions through interactive conversation using natural language processing.
 
 ## AI-Powered Emotion Detection
