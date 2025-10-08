@@ -1,0 +1,249 @@
+:root {
+  --primary: #6d8b74;
+  --secondary: #d0b8a8;
+  --accent: #f8ede3;
+  --text: #3a506b;
+  --shadow: rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9f5f0 0%, #e8e1d5 100%);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.bodyguard {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.chat-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px var(--shadow);
+  margin: 0 20px 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.bot-message {
+  background-color: var(--accent);
+  border-bottom-left-radius: 5px;
+  margin-right: auto;
+}
+
+.user-message {
+  background-color: var(--primary);
+  color: white;
+  border-bottom-right-radius: 5px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.progress-container {
+  height: 6px;
+  background-color: #eee;
+  border-radius: 3px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary);
+  width: 0%;
+  transition: width 0.5s;
+}
+
+.emoji-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.emoji-option {
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.emoji-option:hover {
+  transform: scale(1.2);
+}
+
+#userInputSection {
+  padding: 0 20px 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #5a7562;
+}
+
+.horoscope {
+  background-color: var(--accent);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px;
+  text-align: center;
+}
+
+.horoscope-emoji {
+  font-size: 60px;
+  margin: 10px;
+}
+
+.verb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.verb-item {
+  background-color: var(--secondary);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.language-switcher {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.language-switcher a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.language-switcher a:hover {
+  color: #5a7562;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .bodyguard {
+    border-radius: 15px;
+  }
+  
+  .chat-container {
+    margin: 0 10px 10px;
+    padding: 15px;
+    max-height: 300px;
+  }
+  
+  .message {
+    max-width: 90%;
+    padding: 10px 15px;
+  }
+  
+  .emoji-option {
+    font-size: 35px;
+  }
+  
+  #userInputSection {
+    padding: 0 10px 10px;
+  }
+}
+
+/* Scrollbar Styling */
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: #c0a895;
+}
