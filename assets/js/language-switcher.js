@@ -20,19 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function highlightCurrentLanguage() {
-    const currentFile = window.location.pathname.split('/').pop();
-    const langLinks = document.querySelectorAll('.language-switcher a');
-
-    langLinks.forEach(link => {
-        const linkFile = getLanguageFile(link.dataset.lang || link.getAttribute('href'));
-        if (linkFile === currentFile) {
-            link.style.color = '#5a7562';
-            link.style.fontWeight = 'bold';
-        } else {
-            link.style.color = '';
-            link.style.fontWeight = '';
-        }
-    });
+  const currentLang = getCurrentLanguageFromURL();
+  const langLinks = document.querySelectorAll('.language-switcher a');
+  
+  langLinks.forEach(link => {
+    const linkLang = link.dataset.lang;
+    if (linkLang === currentLang) {
+      link.style.color = '#5a7562';
+      link.style.fontWeight = 'bold';
+    } else {
+      link.style.color = '';
+      link.style.fontWeight = '';
+    }
+  });
 }
 
 // Sprachwechsel
