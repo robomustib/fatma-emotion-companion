@@ -1,21 +1,37 @@
 # 👩🏽⚕️ Fatma - Your Emotion Companion
 
-A multilingual web application that helps users explore and understand their emotions through interactive conversation.
+A multilingual AI-powered web application that helps users explore and understand their emotions through interactive conversation using natural language processing.
+
+## AI-Powered Emotion Detection
+
+Fatma uses sophisticated natural language processing techniques to:
+
+- **Detect emotional states** from user input
+- **Identify action verbs** associated with specific emotions
+- **Generate context-aware responses** based on emotional patterns
+- **Provide personalized insights** through adaptive questioning
+
+### AI Features
+
+- **Emotion Keyword Recognition**: Direct mapping of verbs to emotional states
+- **Contextual Understanding**: Adaptive follow-up questions based on conversation history
+- **Multilingual NLP**: Emotion detection in German, English, and Turkish
+- **Pattern Recognition**: Identification of emotional clusters and themes
 
 ## Features
 
-- Interactive chat interface with emotion detection
+- Interactive AI chat interface with emotion detection
 - Multilingual support (German, English, Turkish)
 - Emoji-based emotion selection
 - Personalized emotion horoscope
 - Progress tracking through conversation
+- Real-time emotion analysis
 
 ## Languages
 
 - 🇩🇪 German (`index.html`)
 - 🇺🇸 English (`en.html`)
 - 🇹🇷 Turkish (`tr.html`)
-
 
 ## How to Use
 
