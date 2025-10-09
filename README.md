@@ -52,6 +52,10 @@ The application uses vanilla JavaScript, HTML, and CSS. No external dependencies
 3. Add emotion data to `emotionData` in `emotions.js`
 4. Update the language switcher in all HTML files
 
+## Demo
+Click here to try out:
+[Fatma Demo](https://www.mustafa-bilgin.de/fatma/index.html)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
