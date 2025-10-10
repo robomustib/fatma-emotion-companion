@@ -43,7 +43,7 @@ Fatma uses sophisticated natural language processing techniques to:
 
 ## Development
 
-The application uses vanilla JavaScript, HTML, and CSS. No external dependencies are required.
+The application uses JavaScript, HTML, and CSS. No external dependencies are required.
 
 ### Adding New Languages
 
