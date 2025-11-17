@@ -1,6 +1,4 @@
-/**
- * Language Switcher für Fatma Emotion Companion
- */
+// Language Switcher für Fatma Emotion Companion
 
 document.addEventListener('DOMContentLoaded', function() {
     const browserLang = navigator.language.split('-')[0];
