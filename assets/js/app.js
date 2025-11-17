@@ -1,8 +1,6 @@
-/**
- * AI Conversation Manager for Fatma Emotion Companion
- */
+// AI Conversation Manager for Fatma Emotion Companion
 
-// ----------------- State Variables -----------------
+// State Variables
 let currentStep = 0;
 let selectedEmoji = '';
 let detectedVerbs = [];
@@ -10,11 +8,11 @@ let conversationHistory = [];
 let detectedEmotions = [];
 let emojiQuestionAsked = false;
 
-// ----------------- DOM Elements -----------------
+// DOM Elements
 let chatContainer, userInput, emojiSelection, progressBar;
 let horoscopeResult, finalEmoji, horoscopeText, verbList, userInputSection;
 
-// ----------------- Language Text -----------------
+// Language Text
 const textContent = {
   de: {
     welcome: "Erzähl mir, was dich heute beschäftigt. Du kannst einfach drauflos schreiben.",
@@ -57,7 +55,7 @@ const textContent = {
   }
 };
 
-// ----------------- Initialize App -----------------
+// Initialize App
 document.addEventListener('DOMContentLoaded', initializeApp);
 
 function initializeApp() {
@@ -80,7 +78,7 @@ function initializeApp() {
   }, 500);
 }
 
-// ----------------- Language Functions -----------------
+// Language Functions
 function getCurrentLanguage() {
   const lang = document.documentElement.lang?.toLowerCase().slice(0, 2) || 'de';
   const supported = ['de', 'en', 'tr'];
@@ -105,7 +103,7 @@ function setupLanguageText() {
   if (newConvButton) newConvButton.textContent = getText('newConversation');
 }
 
-// ----------------- Event Listeners -----------------
+// Event Listeners
 function setupEventListeners() {
   if (userInput) {
     userInput.addEventListener('keypress', e => {
@@ -114,7 +112,7 @@ function setupEventListeners() {
   }
 }
 
-// ----------------- Chat Functions -----------------
+// Chat Functions
 function addBotMessage(text) {
   if (!chatContainer) return;
   const msg = document.createElement('div');
@@ -133,14 +131,14 @@ function addUserMessage(text) {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-// ----------------- Progress Bar -----------------
+// Progress Bar
 function updateProgress() {
   if (!progressBar) return;
   const progress = (currentStep / 5) * 100;
   progressBar.style.width = `${progress}%`;
 }
 
-// ----------------- Main Input Processing -----------------
+// Main Input Processing
 function processUserInput() {
   if (!userInput) return;
   const text = userInput.value.trim();
@@ -171,7 +169,7 @@ function processUserInput() {
   }
 }
 
-// ----------------- Conversation Flow -----------------
+// Conversation Flow
 function handleConversationFlow(text) {
   console.log('Conversation Flow - Step:', currentStep);
   
@@ -215,7 +213,7 @@ function handleConversationFlow(text) {
   }
 }
 
-// ----------------- Emoji Selection -----------------
+// Emoji Selection
 function selectEmoji(emoji) {
   console.log('selectEmoji called with:', emoji);
   
@@ -234,7 +232,7 @@ function selectEmoji(emoji) {
   }, 500);
 }
 
-// ----------------- Contextual Questions -----------------
+// Contextual Questions
 function getContextualQuestion(emoji) {
   const lang = getCurrentLanguage();
   
@@ -358,7 +356,7 @@ function getDeepQuestion(emoji, previousAnswer) {
   return questionSet[Math.floor(Math.random() * questionSet.length)];
 }
 
-// ----------------- Emotion Detection & Processing -----------------
+// Emotion Detection & Processing
 function processEmotionDetection(text) {
   const emotionData = getEmotionData();
   detectedVerbs = [];
@@ -370,13 +368,13 @@ function processEmotionDetection(text) {
     }
   }
   
-  // Fallback: Einfache Wortanalyse
+  // Fallback für eine einfache Wortanalyse
   if (detectedVerbs.length === 0) {
     const words = text.toLowerCase().split(/\s+/);
     detectedVerbs = words.filter(word => word.length > 3).slice(0, 3);
   }
   
-  // Feedback geben (optional)
+  // Feedbackfunktion (weiterentwicklung)
   let feedback = '';
   if (detectedVerbs.length > 0) {
     feedback = getText('iHear') + " " + detectedVerbs.join(', ');
@@ -392,7 +390,7 @@ function processEmotionDetection(text) {
   }
 }
 
-// ----------------- Horoscope Generation -----------------
+//  Horoscope Generation
 function generateHoroscope() {
   console.log('Generating horoscope at step:', currentStep);
   
@@ -432,7 +430,7 @@ function generateHoroscope() {
   horoscopeResult.scrollIntoView({ behavior: 'smooth' });
 }
 
-// ----------------- Global Functions -----------------
+// Global Functions
 window.processUserInput = processUserInput;
 window.selectEmoji = selectEmoji;
 
