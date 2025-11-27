@@ -65,11 +65,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this software for your research, please cite it using the DOI:
 
 **APA Format (7th Ed.):**
-> Bilgin, M. (2025). *Let's talk about feelings. Let's grow with Fatma.* (Version 1.0.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.17635298](https://doi.org/10.5281/zenodo.17635230)
+> Bilgin, M. (2025). *Let's talk about feelings. Let's grow with Fatma.* (Version 1.0.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.17635230](https://doi.org/10.5281/zenodo.17635230)
 
 **BibTeX:**
 ```bibtex
-@software{gladia_batch_transcriber,
+@software{fatma-emotion-companion,
   author       = {Bilgin, Mustafa},
   title        = {Let's talk about feelings. Let's grow with Fatma.},
   year         = {2025},
