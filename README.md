@@ -45,6 +45,15 @@ Fatma uses sophisticated natural language processing techniques to:
 
 The application uses JavaScript, HTML, and CSS. No external dependencies are required.
 
+## Flowchart
+<img src="https://github.com/robomustib/fatma-emotion-companion/blob/main/assets/img/flowchart_fatma.svg" alt="Flowchart of Fatma" width="50%"/>
+
+# Color Legend
+
+- Light Blue - User interactions (selection, input, processing)
+- Pink - Decision points (user choices, language selection)
+- Light Green - System processes (messages, language switching)
+
 ### Adding New Languages
 
 1. Create a new HTML file (e.g., `fr.html` for French)
