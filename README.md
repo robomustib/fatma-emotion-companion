@@ -80,3 +80,6 @@ If you use this software for your research, please cite it using the DOI:
 }
 
 ```
+
+## Dedication
+This project is dedicated to my grandmother Fatma, who has always been like a mysterious Oghuz shaman to me – wise and deeply connected to her inner emotional world. Her charisma has inspired the heart of this companion.
